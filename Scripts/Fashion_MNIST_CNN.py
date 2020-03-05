@@ -1,6 +1,3 @@
-%tensorflow_version 2.x
-
-import tensorflow as tf
 from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPool2D, UpSampling2D
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.datasets import fashion_mnist
@@ -9,9 +6,6 @@ from tensorflow.keras.datasets import fashion_mnist
 
 x_train = (x_train.astype('float32') / 255.0).reshape((-1,28,28,1))
 x_test = (x_test.astype('float32') / 255.0).reshape((-1,28,28,1))
-
-def CustomLoss(y_true, y_pred):
-  return tf.math.reduce_mean(tf.math.reduce_sum(((y_pred - y_true) ** 2),axis=-1))
 
 net = Sequential()
 net.add(Conv2D(filters=16, kernel_size=(3,3), activation="tanh", padding="same"))
