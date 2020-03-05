@@ -5,8 +5,6 @@ import numpy as np
 from datetime import datetime
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Flatten, Dense, Conv2D
-from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
 
 
 nows   = datetime.now().strftime("%Y%m%d-%H%M%S")

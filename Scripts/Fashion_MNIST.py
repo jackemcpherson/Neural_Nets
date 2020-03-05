@@ -1,15 +1,10 @@
 import os
-import io
 import datetime
 import tensorflow as tf
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.callbacks import TensorBoard, LambdaCallback
-from sklearn.metrics import confusion_matrix, plot_confusion_matrix
 
 callbacks = []
 
